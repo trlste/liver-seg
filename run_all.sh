@@ -24,8 +24,8 @@ find "$FOLDER" -type f -name "*Snapshot*.tif" | while read -r file; do
         continue
     fi
 
-    echo "Processing $file"
-    python3 simple_otsu.py "$file"
+    #echo "Processing $file"
+    python3 analyze_dab.py "$file" output.csv
 done
 
 echo "Done."
