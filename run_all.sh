@@ -16,7 +16,7 @@ if [ ! -d "$FOLDER" ]; then
 fi
 
 # Loop through all .tif files
-for file in "$FOLDER"/*.tif; do
+find "$FOLDER" -type f -name "*Snapshot*.tif" | while read -r file; do
     # Handle case where no tif files exist
     [ -e "$file" ] || continue
 
